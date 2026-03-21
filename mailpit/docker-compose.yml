@@ -1,0 +1,9 @@
+services:
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: python-mailpit
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      MP_SMTP_BIND_ADDR: "127.0.0.1:2525"
+      MP_UI_BIND_ADDR: "127.0.0.1:18025"
